@@ -1,0 +1,11 @@
+---
+name: "create_rules"
+enabled: true
+description: "Create random rules."
+runner_type: "run-python"
+entry_point: "create_rules.py"
+parameters:
+  count:
+    type: "integer"
+    description: "How many rules to create."
+    default: 100
