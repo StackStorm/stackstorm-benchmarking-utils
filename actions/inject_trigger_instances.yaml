@@ -1,0 +1,27 @@
+---
+name: "inject_trigger_instances"
+enabled: true
+description: "Inject trigger instances into the system."
+runner_type: "local-shell-cmd"
+parameters:
+  triggers:
+    type: "string"
+    description: "Name of the triggers to inject."
+    default: "core.st2.key_value_pair.create"
+    required: true
+  schema_file:
+    type: "string"
+    description: "Path to the file with trigger payload schema."
+    default: "/tmp/stackstorm-benchmarking-utils/fixtures/trigger_2.yaml"
+    required: true
+  duration:
+    type: "integer"
+    description: "How long to inject triggers for in seconds."
+    default: 60
+  repo_path:
+    type: "string"
+    description: "Path to st2 repo git checkout which contains st2-inject-trigger-instances.py script."
+    default: "/tmp/st2"
+  cmd:
+    immutable: true
+    default: '{{ repo_path }}/tools/st2-inject-trigger-instances.py --triggers "{{ triggers }}" --schema_file "{{ schema_file }}"'
