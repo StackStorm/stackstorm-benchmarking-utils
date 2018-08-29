@@ -1,0 +1,4 @@
+core.st2.key_value_pair.create:
+  object:
+    name: "key1"
+    value: "value1"
