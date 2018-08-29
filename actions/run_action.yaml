@@ -1,0 +1,22 @@
+---
+name: "run_action"
+enabled: true
+description: "Run an action / schedule an execution for a particular action using StackStorm API."
+runner_type: "run-python"
+entry_point: "run_action.py"
+parameters:
+  action_ref:
+    type: "string"
+    description: "Action reference."
+    required: true
+  parameters:
+    type: "object"
+    description: "Action parameters."
+    required: false
+  count:
+    type: "integer"
+    description: "How many times to run an action."
+    default: 100
+  concurrency:
+    type: "integer"
+    description: "Concurrency to use when scheduling executions."
