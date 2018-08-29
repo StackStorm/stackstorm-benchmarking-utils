@@ -1,0 +1,5 @@
+# When using with create_rules action and count X it will result in match rate of X / 5
+core.st2.key_value_pair.create:
+  object:
+    name: "key1"
+    value: "value1"
