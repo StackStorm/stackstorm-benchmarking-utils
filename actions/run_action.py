@@ -54,6 +54,3 @@ class RunActionAction(Action):
         delta = (end_timestamp - start_timestamp)
 
         print('Scheduled %s action executions in %ss.' % (count, delta))
-
-RunActionAction().run(action_ref='core.local', parameters={'cmd': 'date'},
-        count=50)

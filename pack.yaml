@@ -1,0 +1,7 @@
+---
+ref: st2_benchmarking_utils
+name: st2_benchmarking_utils
+description: Various actions for benchmarking a StackStorm deployment.
+version: 0.1.0
+author: StackStorm, Inc.
+email: info@stackstorm.com
